@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Twitter</title>
+<style>
+    div {
+        margin-left: 400px;
+        margin-right: 400px;
+    }
+</style>
+</head>
+<body>
+     <h1 style="text-align: center; font-size: 200%;"> Twitter Search Results </h1>
+    
+    <% TwitterApi.search("wolfkrone").each do |tweet| %>
+    <div><li><%= "#{tweet.user.screen_name}: #{tweet.full_text}" %><br /><br /></li></div>
+    <% end %>
+
+</body>
+</html>
